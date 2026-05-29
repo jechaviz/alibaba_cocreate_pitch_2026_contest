@@ -1,0 +1,96 @@
+{
+  "_template_policy": "__PLACEHOLDERS_ONLY_NO_CREDENTIALS_OR_SECRETS__",
+  "contest": {
+    "program_name": "__PROGRAM_NAME__",
+    "track": "__TRACK_SLUG_AI_STARTUP_PITCH__",
+    "application_surface": "__ACCIO_WORK_OR_COCREATE_FORM_URL__",
+    "region_or_final_preference": "__REGION_OR_FINAL_PREFERENCE_IF_REQUESTED__"
+  },
+  "applicant": {
+    "legal_name": "__APPLICANT_LEGAL_NAME__",
+    "preferred_name": "__APPLICANT_PREFERRED_NAME__",
+    "role_title": "__APPLICANT_ROLE_TITLE__",
+    "email": "__APPLICANT_EMAIL__",
+    "phone": "__APPLICANT_PHONE_IF_REQUIRED__",
+    "country": "__APPLICANT_COUNTRY__",
+    "city": "__APPLICANT_CITY__",
+    "linkedin_url": "__APPLICANT_LINKEDIN_URL__"
+  },
+  "organization": {
+    "company_name": "__COMPANY_OR_PROJECT_NAME__",
+    "legal_entity_name": "__LEGAL_ENTITY_NAME_IF_ANY__",
+    "website_url": "__WEBSITE_URL__",
+    "company_stage": "__IDEA_PROTOTYPE_LAUNCHED_REVENUE_STAGE__",
+    "incorporation_country": "__INCORPORATION_COUNTRY_IF_ANY__",
+    "founding_year": "__FOUNDING_YEAR__",
+    "team_size": "__TEAM_SIZE__",
+    "industry": "__INDUSTRY_OR_CATEGORY__"
+  },
+  "pitch": {
+    "one_liner": "__ONE_LINE_PITCH__",
+    "problem": "__CUSTOMER_PROBLEM__",
+    "solution": "__SOLUTION_SUMMARY__",
+    "product_description": "__PRODUCT_DESCRIPTION__",
+    "ai_integration": "__HOW_AI_IS_USED_IN_THE_PRODUCT_OR_OPERATIONS__",
+    "why_now": "__WHY_NOW__",
+    "target_customer": "__TARGET_CUSTOMER__",
+    "market_size": "__MARKET_SIZE_AND_SOURCE_SUMMARY__",
+    "competition": "__COMPETITIVE_LANDSCAPE__",
+    "differentiation": "__DIFFERENTIATION__",
+    "business_model": "__BUSINESS_MODEL__",
+    "go_to_market": "__GO_TO_MARKET_PLAN__",
+    "traction": "__TRACTION_METRICS__",
+    "revenue": "__REVENUE_OR_PILOT_STATUS__",
+    "funding_status": "__FUNDING_STATUS_IF_REQUESTED__",
+    "impact": "__CUSTOMER_OR_MARKET_IMPACT__",
+    "milestones": "__NEXT_6_TO_12_MONTH_MILESTONES__"
+  },
+  "accio_work": {
+    "used_accio_work": "__YES_NO_OR_PLANNED__",
+    "usage_summary": "__HOW_ACCIO_WORK_WAS_USED__",
+    "agent_workflows": [
+      "__ACCIO_WORKFLOW_1__",
+      "__ACCIO_WORKFLOW_2__",
+      "__ACCIO_WORKFLOW_3__"
+    ],
+    "generated_or_supported_assets": [
+      "__ACCIO_SUPPORTED_ASSET_1__",
+      "__ACCIO_SUPPORTED_ASSET_2__"
+    ],
+    "receipt_or_export_paths": [
+      "__LOCAL_EVIDENCE_PATH_1__",
+      "__LOCAL_EVIDENCE_PATH_2__"
+    ]
+  },
+  "alibaba_ecosystem_fit": {
+    "sourcing_or_supplier_need": "__SOURCING_OR_SUPPLIER_NEED__",
+    "global_trade_relevance": "__GLOBAL_TRADE_RELEVANCE__",
+    "manufacturing_or_fulfillment_plan": "__MANUFACTURING_OR_FULFILLMENT_PLAN__",
+    "buyer_or_seller_benefit": "__BUYER_OR_SELLER_BENEFIT__"
+  },
+  "assets": {
+    "deck_pdf_path": "__LOCAL_DECK_PDF_PATH__",
+    "pitch_video_url": "__PITCH_VIDEO_URL__",
+    "demo_url": "__DEMO_URL__",
+    "repo_url": "__REPOSITORY_URL_IF_ALLOWED__",
+    "product_screenshot_paths": [
+      "__LOCAL_SCREENSHOT_PATH_1__",
+      "__LOCAL_SCREENSHOT_PATH_2__"
+    ],
+    "logo_path": "__LOCAL_LOGO_PATH_IF_REQUESTED__"
+  },
+  "compliance": {
+    "is_original_work": "__CONFIRM_AFTER_OPERATOR_REVIEW__",
+    "has_rights_to_submit": "__CONFIRM_AFTER_OPERATOR_REVIEW__",
+    "can_receive_marketing_updates": "__OPERATOR_DECISION__",
+    "accepts_rules_terms_privacy": "__OPERATOR_ONLY_FINAL_CONFIRMATION__",
+    "no_confidential_information_in_public_fields": "__CONFIRM_AFTER_OPERATOR_REVIEW__"
+  },
+  "operator_handoff": {
+    "account_login_required": "__OPERATOR_COMPLETES_IN_BROWSER__",
+    "captcha_or_bot_check": "__OPERATOR_COMPLETES_IN_BROWSER__",
+    "mfa_or_email_verification": "__OPERATOR_COMPLETES_IN_BROWSER__",
+    "file_picker_uploads": "__OPERATOR_COMPLETES_IF_NATIVE_DIALOG_APPEARS__",
+    "final_submit": "__OPERATOR_ONLY_AFTER_FINAL_REVIEW__"
+  }
+}

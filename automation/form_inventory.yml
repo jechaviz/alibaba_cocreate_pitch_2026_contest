@@ -1,0 +1,337 @@
+metadata:
+  name: alibaba_cocreate_pitch_2026_form_inventory
+  contest_slug: alibaba_cocreate_pitch_2026
+  track_slug: ai_startup_pitch
+  last_public_recheck: "2026-05-29"
+  payload_template: automation/form_payload.template.json
+  status: "draft_inventory_pending_live_form_verification"
+  notes:
+    - "Public pages confirm CoCreate Pitch 2026 and Accio Work application surfaces, but account-only form fields must be verified in an authorized session."
+    - "Automation must never store Alibaba, Accio, email, phone, MFA, CAPTCHA, or payment credentials."
+
+sources:
+  cocreate_public:
+    url: "https://about.alibaba.com/cocreatepitch"
+    purpose: "Public CoCreate Pitch page and official program redirect surface."
+  accio_work_cocreate:
+    url: "https://www.accio.com/work/cocreate_pitch?src=p_eventpitch_ytkol_jonlawweb"
+    purpose: "Public Accio Work CoCreate Pitch page with apply/sign-up calls to action."
+  accio_work_student_track:
+    url: "https://www.accio.com/work/cocreate_pitch/student_track?src=p_eventpitch_ytkol_jonlawweb"
+    purpose: "Student-track sibling page useful for detecting shared application UI patterns only."
+
+mode_controls:
+  default_mode: dry_run
+  environment_flags:
+    CONTESTOPS_DRY_RUN_MODE:
+      default: "true"
+      effect: "Prepare payload and evidence folders only."
+    CONTESTOPS_ALLOW_DRAFT_FILL:
+      default: "false"
+      effect: "Future live fill automation may type into draft fields only after operator approval."
+    CONTESTOPS_ALLOW_FINAL_SUBMIT:
+      default: "false"
+      effect: "No playbook may click final submit unless this is true and the operator confirms in session."
+  prohibited_actions:
+    - "Automated account creation."
+    - "Automated CAPTCHA, bot check, or MFA solving."
+    - "Automated acceptance of terms, privacy, marketing consent, or legal attestations."
+    - "Automated final submission."
+    - "Persistence of credentials, cookies, session tokens, or private applicant documents outside approved evidence folders."
+
+evidence_conventions:
+  root: "automation/evidence"
+  dry_run_session: "automation/evidence/YYYYMMDD-HHMMSS-cocreate-dry-run"
+  live_prep_session: "automation/evidence/YYYYMMDD-HHMMSS-cocreate-live-prep"
+  subfolders:
+    screenshots: "Browser screenshots with timestamped names."
+    html: "Sanitized HTML snapshots, if captured after operator approval."
+    network: "Redacted request metadata only; no auth headers, cookies, or tokens."
+    receipts: "Saved-draft receipt, confirmation page, or email receipt screenshots."
+    exports: "Payload copies and form-field export maps with secrets removed."
+    operator-notes: "Manual notes from auth, CAPTCHA, upload, and final review handoffs."
+  filename_pattern: "YYYYMMDD-HHMMSS__surface__event__redacted.ext"
+  redaction_required:
+    - "Email verification codes."
+    - "Session cookies and authorization headers."
+    - "Applicant phone number unless needed for official receipt."
+    - "Non-public company financials beyond final reviewed submission text."
+
+handoff_points:
+  - id: account_sign_in
+    trigger: "Any Accio Work, Alibaba.com, or CoCreate account gate."
+    operator_action: "Sign in or create account manually in the visible browser."
+    automation_action: "Pause and record handoff event only."
+  - id: captcha_or_bot_check
+    trigger: "Slider, CAPTCHA, Baxia, device trust, or unusual traffic challenge."
+    operator_action: "Complete challenge manually."
+    automation_action: "Do not interact with challenge controls."
+  - id: mfa_or_email_phone_verification
+    trigger: "Email code, SMS code, authenticator, or magic-link confirmation."
+    operator_action: "Complete verification manually."
+    automation_action: "Never request or log verification codes."
+  - id: legal_and_consent
+    trigger: "Terms, privacy, eligibility, originality, marketing, or rule acceptance."
+    operator_action: "Read and decide manually."
+    automation_action: "Surface the checkbox label and stop for confirmation."
+  - id: native_file_upload
+    trigger: "OS file picker for deck, image, video, or proof uploads."
+    operator_action: "Choose file manually or approve exact local file path."
+    automation_action: "Record intended artifact path and wait."
+  - id: final_submit
+    trigger: "Submit, send, apply, or finalize button after review."
+    operator_action: "Confirm final submission explicitly."
+    automation_action: "Stop unless CONTESTOPS_ALLOW_FINAL_SUBMIT=true and operator confirms in-session."
+
+field_inventory:
+  - id: track_selection
+    status: expected_form_field
+    payload_path: contest.track
+    expected_control: "radio, card, dropdown, or hidden route state"
+    selector_hints:
+      - "AI Startup Pitch"
+      - "Startup"
+      - "Track"
+    required: "expected"
+    operator_review: "Confirm this is the non-student startup track before draft fill."
+  - id: region_or_event_preference
+    status: conditional_expected
+    payload_path: contest.region_or_final_preference
+    expected_control: "dropdown or radio"
+    selector_hints:
+      - "Los Angeles"
+      - "London"
+      - "Region"
+      - "Location"
+    required: "unknown_until_live_form"
+    operator_review: "Choose only after checking current eligibility and deadline language."
+  - id: applicant_name
+    status: expected_form_field
+    payload_path: applicant.legal_name
+    expected_control: "text"
+    selector_hints:
+      - "Full name"
+      - "Name"
+      - "Founder name"
+    required: "likely"
+    operator_review: "Use legal or preferred name exactly as requested by the form."
+  - id: applicant_role
+    status: expected_form_field
+    payload_path: applicant.role_title
+    expected_control: "text or dropdown"
+    selector_hints:
+      - "Role"
+      - "Title"
+      - "Founder"
+    required: "unknown_until_live_form"
+    operator_review: "Confirm whether founder, CEO, student, or team role is requested."
+  - id: applicant_email
+    status: account_related
+    payload_path: applicant.email
+    expected_control: "email"
+    selector_hints:
+      - "Email"
+      - "Account email"
+    required: "likely"
+    operator_review: "May be prefilled by account; do not automate login or verification."
+  - id: applicant_phone
+    status: conditional_expected
+    payload_path: applicant.phone
+    expected_control: "tel"
+    selector_hints:
+      - "Phone"
+      - "Mobile"
+      - "WhatsApp"
+    required: "unknown_until_live_form"
+    operator_review: "Operator decides if phone/SMS consent is acceptable."
+  - id: applicant_country_city
+    status: expected_form_field
+    payload_path: "applicant.country, applicant.city"
+    expected_control: "dropdown and text"
+    selector_hints:
+      - "Country"
+      - "City"
+      - "Location"
+    required: "likely"
+    operator_review: "Match eligibility region and final location preference."
+  - id: company_name
+    status: expected_form_field
+    payload_path: organization.company_name
+    expected_control: "text"
+    selector_hints:
+      - "Company"
+      - "Startup"
+      - "Project name"
+    required: "likely"
+    operator_review: "Must match deck and public-facing package."
+  - id: legal_entity
+    status: conditional_expected
+    payload_path: organization.legal_entity_name
+    expected_control: "text"
+    selector_hints:
+      - "Legal entity"
+      - "Registered company"
+    required: "unknown_until_live_form"
+    operator_review: "Use TBD or not incorporated only if form allows it."
+  - id: website_demo
+    status: expected_form_field
+    payload_path: "organization.website_url, assets.demo_url"
+    expected_control: "url"
+    selector_hints:
+      - "Website"
+      - "Demo"
+      - "Product link"
+    required: "likely"
+    operator_review: "Verify links are public or intentionally access-controlled."
+  - id: one_liner
+    status: expected_form_field
+    payload_path: pitch.one_liner
+    expected_control: "short text"
+    selector_hints:
+      - "One-liner"
+      - "Tagline"
+      - "Brief description"
+    required: "likely"
+    operator_review: "Keep within any discovered character limit."
+  - id: problem
+    status: expected_form_field
+    payload_path: pitch.problem
+    expected_control: "textarea"
+    selector_hints:
+      - "Problem"
+      - "Pain point"
+      - "Need"
+    required: "likely"
+    operator_review: "Use final reviewed pitch copy."
+  - id: solution_product
+    status: expected_form_field
+    payload_path: "pitch.solution, pitch.product_description"
+    expected_control: "textarea"
+    selector_hints:
+      - "Solution"
+      - "Product"
+      - "What are you building"
+    required: "likely"
+    operator_review: "Align with deck, demo, and Accio Work use."
+  - id: ai_usage
+    status: expected_form_field
+    payload_path: pitch.ai_integration
+    expected_control: "textarea or checkbox group"
+    selector_hints:
+      - "AI"
+      - "Artificial intelligence"
+      - "AI-powered"
+    required: "likely"
+    operator_review: "Distinguish product AI from operations automation."
+  - id: accio_work_usage
+    status: expected_form_field
+    payload_path: "accio_work.used_accio_work, accio_work.usage_summary"
+    expected_control: "textarea, radio, or account-attached proof"
+    selector_hints:
+      - "Accio Work"
+      - "Built with Accio"
+      - "AI agent"
+    required: "likely"
+    operator_review: "Attach or reference only reviewed Accio Work receipts."
+  - id: market_customer
+    status: expected_form_field
+    payload_path: "pitch.target_customer, pitch.market_size"
+    expected_control: "textarea"
+    selector_hints:
+      - "Market"
+      - "Customer"
+      - "Audience"
+    required: "unknown_until_live_form"
+    operator_review: "Use sourced claims and avoid unsupported market numbers."
+  - id: traction_revenue
+    status: conditional_expected
+    payload_path: "pitch.traction, pitch.revenue"
+    expected_control: "textarea or numeric fields"
+    selector_hints:
+      - "Traction"
+      - "Revenue"
+      - "Users"
+      - "Customers"
+    required: "unknown_until_live_form"
+    operator_review: "Only include metrics backed by approved evidence."
+  - id: business_model_go_to_market
+    status: expected_form_field
+    payload_path: "pitch.business_model, pitch.go_to_market"
+    expected_control: "textarea"
+    selector_hints:
+      - "Business model"
+      - "Go-to-market"
+      - "Commercialization"
+    required: "unknown_until_live_form"
+    operator_review: "Use concise final package language."
+  - id: team
+    status: expected_form_field
+    payload_path: "organization.team_size, applicant.role_title"
+    expected_control: "textarea, repeater, or numeric field"
+    selector_hints:
+      - "Team"
+      - "Founder"
+      - "Members"
+    required: "likely"
+    operator_review: "Do not invent team members or credentials."
+  - id: deck_upload
+    status: operator_handoff
+    payload_path: assets.deck_pdf_path
+    expected_control: "file upload"
+    selector_hints:
+      - "Deck"
+      - "Pitch deck"
+      - "Upload"
+    required: "unknown_until_live_form"
+    operator_review: "Native file picker is operator-controlled unless exact path is approved."
+  - id: video_url_or_upload
+    status: conditional_expected
+    payload_path: assets.pitch_video_url
+    expected_control: "url or file upload"
+    selector_hints:
+      - "Video"
+      - "Pitch video"
+      - "Demo video"
+    required: "unknown_until_live_form"
+    operator_review: "Confirm public/unlisted visibility and duration rules."
+  - id: terms_privacy_rules
+    status: operator_handoff
+    payload_path: compliance.accepts_rules_terms_privacy
+    expected_control: "checkbox"
+    selector_hints:
+      - "Terms"
+      - "Privacy"
+      - "Rules"
+      - "Eligibility"
+    required: "likely"
+    operator_review: "Operator reads and accepts manually."
+  - id: marketing_consent
+    status: operator_handoff
+    payload_path: compliance.can_receive_marketing_updates
+    expected_control: "checkbox"
+    selector_hints:
+      - "promotions"
+      - "marketing"
+      - "email and phone"
+      - "SMS"
+    required: "optional_or_conditional"
+    operator_review: "Operator decides manually; do not preselect."
+  - id: final_submit_button
+    status: operator_handoff
+    payload_path: operator_handoff.final_submit
+    expected_control: "button"
+    selector_hints:
+      - "Submit"
+      - "Apply"
+      - "Send"
+      - "Finalize"
+    required: "final_step"
+    operator_review: "Stop for final review and explicit confirmation."
+
+live_discovery_checklist:
+  - "Open public CoCreate page and Accio Work application URL in a visible browser."
+  - "Let the operator complete login, CAPTCHA, and MFA."
+  - "Capture visible field labels, required markers, character limits, and upload constraints."
+  - "Update this inventory with exact selectors only after confirming they are stable."
+  - "Run dry-run payload validation before any draft fill."
+  - "Save draft first, capture receipt, then stop for operator review before final submit."

@@ -1,0 +1,81 @@
+metadata:
+  name: contestops-cocreate-submission-dry-run
+  description: "Prepare local evidence folders and verify required submission scaffold files without opening or submitting external forms."
+
+variables:
+  PROJECT_DIR: "${ROOT_PLAYBOOK_DIR}/../.."
+  AUTOMATION_DIR: "${PROJECT_DIR}/automation"
+  PAYLOAD_TEMPLATE_PATH: "${AUTOMATION_DIR}/form_payload.template.json"
+  FIELD_INVENTORY_PATH: "${AUTOMATION_DIR}/form_inventory.yml"
+  EVIDENCE_ROOT: "${AUTOMATION_DIR}/evidence"
+  DRY_RUN_DIR: "${EVIDENCE_ROOT}/dry-run"
+  TRACE_PATH: "${DRY_RUN_DIR}/cocreate_submission_dry_run_trace.jsonl"
+  DRY_RUN_MODE: "${CONTESTOPS_DRY_RUN_MODE}"
+
+steps:
+  prod:
+    - action: FS.EnsureDir
+      params:
+        path: "${EVIDENCE_ROOT}"
+
+    - action: FS.EnsureDir
+      params:
+        path: "${DRY_RUN_DIR}"
+
+    - action: FS.EnsureDir
+      params:
+        path: "${DRY_RUN_DIR}/screenshots"
+
+    - action: FS.EnsureDir
+      params:
+        path: "${DRY_RUN_DIR}/receipts"
+
+    - action: FS.EnsureDir
+      params:
+        path: "${DRY_RUN_DIR}/operator-notes"
+
+    - action: Trace.Event
+      params:
+        path: "${TRACE_PATH}"
+        name: "dry_run_start"
+        message: "Preparing CoCreate Pitch and Accio Work submission scaffold in dry-run mode."
+        data:
+          dry_run: true
+          external_form_opened: false
+          payload_template: "${PAYLOAD_TEMPLATE_PATH}"
+          field_inventory: "${FIELD_INVENTORY_PATH}"
+          evidence_dir: "${DRY_RUN_DIR}"
+          dry_run_mode_env: "${DRY_RUN_MODE}"
+
+    - action: FS.Exists
+      register: payload_template_exists
+      params:
+        path: "${PAYLOAD_TEMPLATE_PATH}"
+
+    - action: FS.Exists
+      register: field_inventory_exists
+      params:
+        path: "${FIELD_INVENTORY_PATH}"
+
+    - action: Trace.Event
+      params:
+        path: "${TRACE_PATH}"
+        name: "scaffold_file_check"
+        message: "Checked payload template and field inventory presence."
+        data:
+          payload_template_exists: "${payload_template_exists}"
+          field_inventory_exists: "${field_inventory_exists}"
+
+    - action: Trace.Event
+      params:
+        path: "${TRACE_PATH}"
+        name: "operator_handoff_policy"
+        message: "Auth, CAPTCHA, MFA, legal consent, native file upload, and final submit are operator-only steps."
+        data:
+          final_submit_allowed: false
+          credentials_allowed_in_payload: false
+
+  debug:
+    - action: Note
+      params:
+        text: "CoCreate submission dry-run playbook is alive."

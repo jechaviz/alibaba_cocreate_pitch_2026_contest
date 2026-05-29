@@ -1,0 +1,102 @@
+metadata:
+  name: contestops-cocreate-live-prep
+  description: "Open authorized CoCreate Pitch and Accio Work surfaces for operator-led form discovery and draft preparation."
+
+variables:
+  PROJECT_DIR: "${ROOT_PLAYBOOK_DIR}/../.."
+  AUTOMATION_DIR: "${PROJECT_DIR}/automation"
+  PAYLOAD_TEMPLATE_PATH: "${AUTOMATION_DIR}/form_payload.template.json"
+  FIELD_INVENTORY_PATH: "${AUTOMATION_DIR}/form_inventory.yml"
+  EVIDENCE_ROOT: "${AUTOMATION_DIR}/evidence"
+  LIVE_PREP_DIR: "${EVIDENCE_ROOT}/live-prep"
+  TRACE_PATH: "${LIVE_PREP_DIR}/cocreate_live_prep_trace.jsonl"
+  COCREATE_PUBLIC_URL: "https://about.alibaba.com/cocreatepitch"
+  ACCIO_APPLY_URL: "https://www.accio.com/work/cocreate_pitch?src=p_eventpitch_ytkol_jonlawweb"
+  CONTESTOPS_DRY_RUN_MODE: "${CONTESTOPS_DRY_RUN_MODE}"
+  CONTESTOPS_ALLOW_DRAFT_FILL: "${CONTESTOPS_ALLOW_DRAFT_FILL}"
+  CONTESTOPS_ALLOW_FINAL_SUBMIT: "${CONTESTOPS_ALLOW_FINAL_SUBMIT}"
+
+steps:
+  prod:
+    - action: FS.EnsureDir
+      params:
+        path: "${EVIDENCE_ROOT}"
+
+    - action: FS.EnsureDir
+      params:
+        path: "${LIVE_PREP_DIR}"
+
+    - action: FS.EnsureDir
+      params:
+        path: "${LIVE_PREP_DIR}/screenshots"
+
+    - action: FS.EnsureDir
+      params:
+        path: "${LIVE_PREP_DIR}/html"
+
+    - action: FS.EnsureDir
+      params:
+        path: "${LIVE_PREP_DIR}/network"
+
+    - action: FS.EnsureDir
+      params:
+        path: "${LIVE_PREP_DIR}/receipts"
+
+    - action: FS.EnsureDir
+      params:
+        path: "${LIVE_PREP_DIR}/operator-notes"
+
+    - action: Trace.Event
+      params:
+        path: "${TRACE_PATH}"
+        name: "live_prep_start"
+        message: "Opening visible browser surfaces for operator-led CoCreate Pitch form preparation."
+        data:
+          public_url: "${COCREATE_PUBLIC_URL}"
+          accio_apply_url: "${ACCIO_APPLY_URL}"
+          payload_template: "${PAYLOAD_TEMPLATE_PATH}"
+          field_inventory: "${FIELD_INVENTORY_PATH}"
+          evidence_dir: "${LIVE_PREP_DIR}"
+          dry_run_mode: "${CONTESTOPS_DRY_RUN_MODE}"
+          draft_fill_allowed: "${CONTESTOPS_ALLOW_DRAFT_FILL}"
+          final_submit_allowed: "${CONTESTOPS_ALLOW_FINAL_SUBMIT}"
+
+    - action: Browser.Open
+      params:
+        url: "${COCREATE_PUBLIC_URL}"
+        headless: false
+
+    - action: Trace.Event
+      params:
+        path: "${TRACE_PATH}"
+        name: "public_surface_opened"
+        message: "CoCreate public page opened. Operator verifies current program language, deadlines, and track routing."
+
+    - action: Browser.Open
+      params:
+        url: "${ACCIO_APPLY_URL}"
+        headless: false
+
+    - action: Trace.Event
+      params:
+        path: "${TRACE_PATH}"
+        name: "operator_handoff_auth_gate"
+        message: "If Accio Work or Alibaba account auth, CAPTCHA, or MFA appears, the operator completes it manually."
+        data:
+          automation_may_solve_captcha: false
+          automation_may_handle_mfa: false
+          automation_may_store_credentials: false
+
+    - action: Trace.Event
+      params:
+        path: "${TRACE_PATH}"
+        name: "submit_gate"
+        message: "Automation must stop at final submit until the operator approves the completed draft."
+        data:
+          final_submit_requires_operator: true
+          final_submit_env_gate: "${CONTESTOPS_ALLOW_FINAL_SUBMIT}"
+
+  debug:
+    - action: Note
+      params:
+        text: "CoCreate live-prep playbook is alive."

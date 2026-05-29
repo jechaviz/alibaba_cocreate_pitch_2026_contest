@@ -1,0 +1,27 @@
+{
+  "id": "ag_20260529214301_50ce7183",
+  "title": "Alibaba CoCreate Pitch 2026 ai_startup_pitch",
+  "mode": "agent",
+  "strategy": "auto",
+  "cwd": "C:\\git\\v_projects\\contests\\worth_it\\alibaba_cocreate_pitch_2026",
+  "files": [],
+  "status": "planned",
+  "createdAt": "2026-05-29T21:43:01.857Z",
+  "updatedAt": "2026-05-29T21:43:01.857Z",
+  "antigravity": {
+    "cli": "C:\\Users\\jecha\\AppData\\Local\\Programs\\Antigravity\\bin\\agy.cmd",
+    "args": [
+      "chat",
+      "--mode",
+      "agent",
+      "--reuse-window",
+      "# Alibaba CoCreate Pitch 2026 ai_startup_pitch\nWorker contract:\nYou are an Antigravity worker launched by Codex. Choose Planning for complex work and Fast for localized work. Use Antigravity's own agent/workers only when they materially help this same assignment. If credits, auth, model availability, or communication fail, stop cleanly and report the classified failure plus the best continuation route. Do not preserve worker transcripts in your final report; summarize each worker's status, files, commands, and whether it is continuable. Keep the task title visible in reports and commit messages when relevant. When Antigravity creates artifacts such as task lists, implementation plans, walkthroughs, screenshots, recordings, or diffs, summarize the artifact names and verification value.\nTask request:\n# Alibaba CoCreate Pitch 2026 ai_startup_pitch\nParent objective: prepare product AI commerce pitch, demo MVP, unit economics, checklist, video outline, and submission package for Alibaba CoCreate Pitch 2026 plus Accio Work. This is a dry-run task manifest for tracking; do not execute external submissions without authorized session context. Required final report includes artifacts, commands run, files changed, worker summaries, and continuable status.\nRequired closing report:\n- Antigravity artifacts produced and what each proves.\n- Outcome and remaining risk.\n- Commands run.\n- Files changed.\n- Failure class if blocked: communication, quota, auth, model, tooling, or unknown.\n- Antigravity workers spawned, with summary only and alive/continuable status."
+    ]
+  },
+  "modelHint": "",
+  "routeLabel": "",
+  "resilience": null,
+  "unstoppable": null,
+  "fallbackPlan": [],
+  "promptPreview": "# Alibaba CoCreate Pitch 2026 ai_startup_pitch\nWorker contract:\nYou are an Antigravity worker launched by Codex. Choose Planning for complex work and Fast for localized work. Use Antigravity's own agent/workers only when they materially help this same assignment. If credits, auth, model availability, or communication fail, stop cleanly and report the classified failure plus the best continuation route. Do not preserve worker transcripts in your final report; summarize each worker's status, files"
+}

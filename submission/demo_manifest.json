@@ -1,0 +1,21 @@
+{
+  "project": "alibaba_cocreate_pitch_2026",
+  "track": "ai_startup_pitch",
+  "product": "Accio Commerce Copilot",
+  "demo": {
+    "web_path": "C:\\git\\websites\\alibaba_cocreate_pitch_2026",
+    "v_backend_path": "C:\\git\\v_projects\\alibaba_cocreate_pitch_2026",
+    "judge_flow": [
+      "select_category",
+      "compare_suppliers",
+      "review_unit_economics",
+      "inspect_risk",
+      "export_buy_plan"
+    ]
+  },
+  "submission": {
+    "repo": "https://github.com/jechaviz/alibaba_cocreate_pitch_2026_contest",
+    "contest_url": "https://about.alibaba.com/cocreatepitch",
+    "accio_work_url": "https://www.accio.com/work/cocreate_pitch"
+  }
+}

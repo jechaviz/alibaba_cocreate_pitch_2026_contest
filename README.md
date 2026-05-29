@@ -2,6 +2,10 @@
 
 Tag: `worth_it`
 
+Track: `ai_startup_pitch`
+
+Submission repo: `https://github.com/jechaviz/alibaba_cocreate_pitch_2026_contest`
+
 Links:
 
 - https://about.alibaba.com/cocreatepitch
@@ -32,8 +36,27 @@ automation para comercio, sourcing, compliance o small business ops.
 
 ## Producto recomendado
 
-`AI Sourcing Copilot for Small Importers`: encuentra proveedores, calcula landed
-cost, riesgos, compliance, tiempos y crea plan de compra/venta.
+`Accio Commerce Copilot`: AI commerce cockpit para pequenos importadores. Compara
+proveedores, calcula landed cost, riesgos, compliance, payback y plan de
+compra/venta.
+
+## Arquitectura local
+
+- Subrepo de oportunidad: `C:\git\v_projects\contests\worth_it\alibaba_cocreate_pitch_2026`
+- Backend/CLI V: `C:\git\v_projects\alibaba_cocreate_pitch_2026`
+- Web demo Vue3 CDN + UnoCSS: `C:\git\websites\alibaba_cocreate_pitch_2026`
+- Reusable package generator: `C:\git\v_projects\contestops_ai`
+- Automation/runbooks: `automation\`, `runbooks\`
+
+## Artefactos
+
+- Pitch: `docs\pitch\product_pitch.md`
+- Unit economics: `docs\pitch\unit_economics.md`
+- Video outline: `docs\media\video_outline.md`
+- Checklist: `submission\checklist.md`
+- Submission packet: `submission\SUBMISSION_PACKET.md`
+- Research: `docs\research\ai_commerce_pitch_research_pack.md`
+- Form map: `docs\submission\requirements.md`
 
 ## Sprint de 4 dias
 
@@ -42,3 +65,11 @@ cost, riesgos, compliance, tiempos y crea plan de compra/venta.
 3. Dia 3: unit economics y supplier/risk dashboard.
 4. Dia 4: video corto + pitch + Accio Work submission.
 
+## Regenerar paquete ContestOps
+
+```powershell
+v run C:\git\v_projects\contestops_ai -- manifest --profile alibaba submission\generated\alibaba_manifest.json
+v run C:\git\v_projects\contestops_ai -- checklist --profile alibaba submission\generated\alibaba_RULES_CHECKLIST.generated.md
+v run C:\git\v_projects\contestops_ai -- evidence --profile alibaba submission\generated\alibaba_EVIDENCE.generated.md
+v run C:\git\v_projects\contestops_ai -- application-packet --profile alibaba submission\generated\alibaba_APPLICATION_PACKET.generated.md
+```
