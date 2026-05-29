@@ -1,0 +1,278 @@
+{
+  "profile": "sample",
+  "currency": "USD",
+  "generated_at": "2026-05-29T00:00:00Z",
+  "summary": {
+    "winner": "accio-work",
+    "winner_score": 92,
+    "runner_up": "ecommerce-research-tool",
+    "runner_up_score": 61,
+    "advantage_points": 31,
+    "proof_note": "Accio Work wins by joining market demand, supplier proof, landed-cost math, risk gates, ROI, and audit-ready output in one workflow."
+  },
+  "dimensions": [
+    {
+      "id": "decision_quality",
+      "label": "Decision quality",
+      "weight": 0.22,
+      "why_it_matters": "Ranks products with demand, risk, margin, and supplier signals instead of isolated facts."
+    },
+    {
+      "id": "landed_cost_depth",
+      "label": "Landed-cost depth",
+      "weight": 0.2,
+      "why_it_matters": "Turns factory quotes into buy-plan economics with freight, tariffs, fees, inspection, and cash need."
+    },
+    {
+      "id": "supplier_evidence",
+      "label": "Supplier evidence",
+      "weight": 0.18,
+      "why_it_matters": "Preserves verification, compliance, defect, lead-time, capacity, and evidence references."
+    },
+    {
+      "id": "accio_workflow_fit",
+      "label": "Accio workflow fit",
+      "weight": 0.16,
+      "why_it_matters": "Fits the Accio sourcing path from discovery through supplier shortlist and purchase planning."
+    },
+    {
+      "id": "auditability",
+      "label": "Auditability",
+      "weight": 0.12,
+      "why_it_matters": "Explains assumptions and outputs a deterministic record a buyer can review or share."
+    },
+    {
+      "id": "time_to_buy_plan",
+      "label": "Time-to-buy-plan",
+      "weight": 0.12,
+      "why_it_matters": "Compresses research into a practical 90-day buy plan with ROI and risk gates."
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "accio-work",
+      "name": "Accio Work buy-plan copilot",
+      "category": "competition-aware product proof",
+      "total_score": 92,
+      "verdict": "10x proof: integrated sourcing intelligence beats point tools by turning supplier evidence into a buy decision.",
+      "scores": [
+        {
+          "dimension_id": "decision_quality",
+          "score": 92,
+          "rationale": "Combines demand, landed cost, supplier risk, and ROI into one recommendation."
+        },
+        {
+          "dimension_id": "landed_cost_depth",
+          "score": 94,
+          "rationale": "Models freight, tariffs, payment fees, inspection, marketplace fees, fulfillment, and cash need."
+        },
+        {
+          "dimension_id": "supplier_evidence",
+          "score": 91,
+          "rationale": "Keeps supplier verification, compliance, lead time, defect, and source evidence references with each candidate."
+        },
+        {
+          "dimension_id": "accio_workflow_fit",
+          "score": 96,
+          "rationale": "Native fit for Accio-style sourcing, supplier comparison, and buy-plan handoff."
+        },
+        {
+          "dimension_id": "auditability",
+          "score": 89,
+          "rationale": "Deterministic JSON makes assumptions, scoring, and proof points reviewable."
+        },
+        {
+          "dimension_id": "time_to_buy_plan",
+          "score": 91,
+          "rationale": "Moves from product shortlist to risk-gated 90-day plan in one CLI flow."
+        }
+      ],
+      "gaps": [
+        "Needs live marketplace integrations beyond the deterministic demo fixture.",
+        "Human buyer still approves final supplier outreach and PO size."
+      ]
+    },
+    {
+      "id": "spreadsheet-sourcing",
+      "name": "Spreadsheet sourcing workflow",
+      "category": "manual baseline",
+      "total_score": 41,
+      "verdict": "Useful as a control case, but not a 10x workflow for fast supplier-backed decisions.",
+      "scores": [
+        {
+          "dimension_id": "decision_quality",
+          "score": 49,
+          "rationale": "Flexible, but decisions depend on manual formulas and fragmented tabs."
+        },
+        {
+          "dimension_id": "landed_cost_depth",
+          "score": 45,
+          "rationale": "Can model landed cost, but fields and assumptions are easy to omit."
+        },
+        {
+          "dimension_id": "supplier_evidence",
+          "score": 35,
+          "rationale": "Evidence usually lives in links, emails, and notes outside the sheet."
+        },
+        {
+          "dimension_id": "accio_workflow_fit",
+          "score": 24,
+          "rationale": "Requires copy-paste work to move from discovery into Accio-style sourcing actions."
+        },
+        {
+          "dimension_id": "auditability",
+          "score": 62,
+          "rationale": "Rows can be reviewed, but provenance and scoring logic drift over time."
+        },
+        {
+          "dimension_id": "time_to_buy_plan",
+          "score": 28,
+          "rationale": "Slow to convert research into an executable buy plan."
+        }
+      ],
+      "gaps": [
+        "High manual upkeep.",
+        "Weak source traceability.",
+        "No built-in risk or ROI gate."
+      ]
+    },
+    {
+      "id": "search-only-tool",
+      "name": "Search-only product research",
+      "category": "search and discovery",
+      "total_score": 31,
+      "verdict": "Good top-of-funnel input, weak final-mile proof.",
+      "scores": [
+        {
+          "dimension_id": "decision_quality",
+          "score": 43,
+          "rationale": "Finds signals but leaves synthesis, tradeoffs, and final ranking to the buyer."
+        },
+        {
+          "dimension_id": "landed_cost_depth",
+          "score": 20,
+          "rationale": "Usually lacks PO-level freight, tariff, inspection, and fee math."
+        },
+        {
+          "dimension_id": "supplier_evidence",
+          "score": 29,
+          "rationale": "Can surface suppliers, but does not normalize operational evidence."
+        },
+        {
+          "dimension_id": "accio_workflow_fit",
+          "score": 26,
+          "rationale": "Discovery output must be rebuilt before it is actionable in Accio workflows."
+        },
+        {
+          "dimension_id": "auditability",
+          "score": 34,
+          "rationale": "Search results change and often lack a durable decision record."
+        },
+        {
+          "dimension_id": "time_to_buy_plan",
+          "score": 36,
+          "rationale": "Fast for finding ideas, slow for converting them into a purchase plan."
+        }
+      ],
+      "gaps": [
+        "No landed-cost model.",
+        "No supplier operating score.",
+        "Low repeatability."
+      ]
+    },
+    {
+      "id": "generic-ai-agent",
+      "name": "Generic AI agent",
+      "category": "general automation",
+      "total_score": 49,
+      "verdict": "Powerful assistant layer, but not a commerce-specific moat by itself.",
+      "scores": [
+        {
+          "dimension_id": "decision_quality",
+          "score": 63,
+          "rationale": "Can summarize and draft, but commerce scoring depends on prompt quality and tool setup."
+        },
+        {
+          "dimension_id": "landed_cost_depth",
+          "score": 48,
+          "rationale": "May calculate costs when prompted, but does not enforce complete landed-cost coverage."
+        },
+        {
+          "dimension_id": "supplier_evidence",
+          "score": 42,
+          "rationale": "Often mixes cited and inferred supplier claims unless evidence rules are built in."
+        },
+        {
+          "dimension_id": "accio_workflow_fit",
+          "score": 39,
+          "rationale": "Needs custom glue to mirror Accio sourcing stages and buyer handoffs."
+        },
+        {
+          "dimension_id": "auditability",
+          "score": 43,
+          "rationale": "Reasoning may be hard to reproduce without structured exports and fixed assumptions."
+        },
+        {
+          "dimension_id": "time_to_buy_plan",
+          "score": 57,
+          "rationale": "Can accelerate research, but final plan quality varies by orchestration."
+        }
+      ],
+      "gaps": [
+        "Requires custom sourcing logic.",
+        "Can miss operational supplier fields.",
+        "Audit trail is not guaranteed."
+      ]
+    },
+    {
+      "id": "ecommerce-research-tool",
+      "name": "Ecommerce product research tool",
+      "category": "market analytics",
+      "total_score": 61,
+      "verdict": "Closest point-tool competitor, but the buy-plan gap remains open.",
+      "scores": [
+        {
+          "dimension_id": "decision_quality",
+          "score": 72,
+          "rationale": "Strong market and listing views, but supplier execution is often separate."
+        },
+        {
+          "dimension_id": "landed_cost_depth",
+          "score": 58,
+          "rationale": "May estimate margins, yet detailed import and inspection assumptions are limited."
+        },
+        {
+          "dimension_id": "supplier_evidence",
+          "score": 64,
+          "rationale": "Can include supplier or listing context, but not always operational verification depth."
+        },
+        {
+          "dimension_id": "accio_workflow_fit",
+          "score": 47,
+          "rationale": "Built for product analytics more than Accio supplier workflow handoff."
+        },
+        {
+          "dimension_id": "auditability",
+          "score": 53,
+          "rationale": "Dashboards are useful, but scoring inputs are not always exportable or explainable."
+        },
+        {
+          "dimension_id": "time_to_buy_plan",
+          "score": 66,
+          "rationale": "Speeds product validation while leaving supplier-risk and PO planning work."
+        }
+      ],
+      "gaps": [
+        "Market insight is stronger than supplier execution proof.",
+        "Landed-cost assumptions can be shallow.",
+        "Workflow fit is indirect."
+      ]
+    }
+  ],
+  "recommended_proof": [
+    "Show the buyer a ranked alternative map, not just a product list.",
+    "Attach supplier evidence and risk gates to every buy-plan recommendation.",
+    "Expose landed-cost assumptions deeply enough for PO sizing and margin review.",
+    "Export deterministic JSON so pitch judges can inspect the proof path."
+  ]
+}

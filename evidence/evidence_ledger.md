@@ -9,6 +9,7 @@
 | Submission requirements | `docs/submission/requirements.md` | active |
 | Product pitch | `docs/pitch/product_pitch.md` | active |
 | Unit economics | `docs/pitch/unit_economics.md` | active |
+| Competitive edge model | `evidence/competitive_edge.json` | active |
 | Demo MVP | `C:\git\websites\alibaba_cocreate_pitch_2026` | done |
 | Backend/CLI | `C:\git\v_projects\alibaba_cocreate_pitch_2026` | done |
 | Web QA screenshots | `evidence/web_qa/` | done |
@@ -25,5 +26,6 @@
 | Evidence manifest | `v run C:\git\v_projects\contestops_ai -- evidence --profile alibaba` | `submission/generated/alibaba_EVIDENCE.generated.md` |
 | Application packet | `v run C:\git\v_projects\contestops_ai -- application-packet --profile alibaba` | `submission/generated/alibaba_APPLICATION_PACKET.generated.md` |
 | Unit economics JSON | product CLI | `evidence/unit_economics.json` |
+| Competitive edge JSON | `v run C:\git\v_projects\alibaba_cocreate_pitch_2026 -- competitive-edge` | `evidence/competitive_edge.json` |
 | Demo manifest | product/web integration | `submission/demo_manifest.json` |
 | Automation dry run | WAIBA dry-run playbook | `automation/evidence/dry-run/cocreate_submission_dry_run_trace.jsonl` |

@@ -20,6 +20,7 @@ Production target: `v1.0.0` submission-ready package for Alibaba CoCreate Pitch 
 | Video outline | done | `docs/media/video_outline.md` |
 | Submission packet | done | `submission/SUBMISSION_PACKET.md`, `submission/accio_cocreate_payload.json` |
 | Competitive judge narrative | active | `docs/pitch/judge_scorecard.md`, `submission/deck_outline.md` |
+| Competitive backend scoring | done | `evidence/competitive_edge.json` |
 
 ## Version Path
 

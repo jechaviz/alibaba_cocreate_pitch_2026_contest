@@ -59,6 +59,7 @@ The 90-second demo opens on the sourcing cockpit, compares supplier options, cal
 - Product pitch: `docs/pitch/product_pitch.md`
 - Unit economics: `docs/pitch/unit_economics.md`
 - Backend evidence export: `evidence/unit_economics.json`
+- Competitive scoring export: `evidence/competitive_edge.json`
 - Web QA screenshots: `evidence/web_qa/`
 - Checklist: `submission/checklist.md`
 - Automation runbook: `runbooks/automation.md`
