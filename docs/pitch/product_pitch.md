@@ -6,11 +6,11 @@ Category: AI commerce / AI startup pitch
 
 ## One-Liner
 
-Accio Commerce Copilot helps small importers decide what to source, from whom, and at what reorder plan by turning supplier options into AI-scored profit, risk, and execution recommendations.
+Accio Commerce Copilot is the Accio Work decision cockpit for small importers deciding their first purchase order. It turns supplier options into a cash-risked buy, negotiate, or pass plan with landed cost, risk, and execution steps.
 
 ## Problem
 
-Small importers and online sellers can discover thousands of supplier listings, but they still make high-stakes buying decisions with fragmented spreadsheets, hidden landed costs, uncertain lead times, and weak confidence in demand. The painful moment is not search; it is deciding whether a product is worth importing before cash is tied up in inventory.
+Small importers do not lose money because they cannot find suppliers. They lose money because they buy the wrong supplier too early. A cheap quote can become an expensive mistake once MOQ, freight, duties, defect reserve, compliance evidence, and lead time collide with uncertain demand.
 
 ## Solution
 
@@ -21,6 +21,8 @@ The product acts as a sourcing decision cockpit:
 - Scores margin, cash conversion, supplier reliability, compliance exposure, and launch readiness.
 - Produces a recommended buy plan, negotiation checklist, listing plan, and reorder trigger.
 - Exports judge-ready evidence for demo, submission, and due diligence.
+
+The key output is not a list of suppliers. It is a cash-risked recommendation: `buy sample`, `negotiate`, or `pass`.
 
 ## AI Workflow
 
@@ -44,7 +46,7 @@ Initial wedge: teams sourcing consumer electronics accessories, home goods, and 
 
 ## Differentiation
 
-- Decision-first, not search-only: the core artifact is a buy/no-buy recommendation.
+- Decision-first, not search-only: the core artifact is a buy/negotiate/pass recommendation.
 - Finance-aware: landed cost and cash conversion are first-class product states.
 - Evidence-led: every recommendation points to source fields, assumptions, and risk flags.
 - Submission-ready: the demo can show Accio Work as the top-of-funnel while the copilot turns results into an operating plan.
@@ -59,4 +61,4 @@ The MVP demonstrates three high-value workflows:
 
 ## Pitch Narrative
 
-Commerce AI should not stop at product search. The next unlock is helping small businesses buy with confidence. Accio Commerce Copilot turns sourcing from a browse-and-hope workflow into a measurable decision system that tells founders which supplier to test, how much cash is at risk, and what to do next.
+Commerce AI should not stop at product search. The next unlock is helping small businesses buy with confidence. Accio Commerce Copilot turns sourcing from a browse-and-hope workflow into a measurable decision system that tells founders when a cheap quote is actually an expensive mistake, which supplier to test, how much cash is at risk, and what to do next.

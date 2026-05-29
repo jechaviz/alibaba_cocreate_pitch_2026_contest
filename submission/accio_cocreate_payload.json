@@ -25,16 +25,16 @@
     "industry": "AI commerce, sourcing, import operations"
   },
   "pitch": {
-    "one_liner": "Accio Commerce Copilot helps small importers decide what to source, from whom, and at what reorder plan by turning supplier options into AI-scored profit, risk, and execution recommendations.",
-    "problem": "Small importers can discover thousands of supplier listings, but they still make high-stakes buying decisions with fragmented spreadsheets, hidden landed costs, uncertain lead times, and weak demand confidence. The painful moment is not search; it is deciding whether a sourced SKU is worth buying before cash is tied up in inventory.",
-    "solution": "The product imports supplier candidates, normalizes MOQ, unit price, shipping, duties, lead time, and payment terms, then scores margin, cash conversion, supplier reliability, compliance exposure, and launch readiness. It outputs a recommended buy plan, negotiation checklist, storefront launch tasks, and reorder trigger.",
+    "one_liner": "Accio Commerce Copilot is the Accio Work decision cockpit for small importers deciding their first purchase order.",
+    "problem": "Small importers do not lose money because they cannot find suppliers. They lose money because they buy the wrong supplier too early. A cheap quote can become an expensive mistake once MOQ, freight, duties, defect reserve, compliance evidence, and lead time collide with uncertain demand.",
+    "solution": "The product imports supplier candidates, normalizes MOQ, unit price, shipping, duties, lead time, and payment terms, then scores margin, cash conversion, supplier reliability, compliance exposure, and launch readiness. It outputs a cash-risked buy, negotiate, or pass plan, plus negotiation checklist, storefront launch tasks, and reorder trigger.",
     "ai_integration": "AI reconciles messy supplier inputs, explains risk drivers, generates RFQ and negotiation messages, and turns financial assumptions into a buy/no-buy recommendation while keeping source assumptions visible for audit.",
     "why_now": "AI sourcing tools are making discovery faster. The next bottleneck is decision quality: turning supplier options into profitable, explainable, and auditable buy plans for small businesses.",
     "target_customer": "US and LATAM small importers, Amazon/Walmart/Shopify sellers, independent retailers, and sourcing agencies that evaluate new physical products frequently without dedicated procurement finance teams.",
     "business_model": "SaaS subscription starting at 149 USD per month, team plans for agencies, and usage-based exports for supplier audit and launch evidence packets.",
     "go_to_market": "Start with seller communities, import education creators, Shopify/Amazon operator groups, and Accio/Alibaba workflow content. The wedge is SKU launch economics for consumer accessories, home goods, and beauty tools.",
     "traction": "MVP demo includes supplier comparison, unit economics, risk scoring, workflow actions, and evidence export. Live-form submission should attach screenshots and local demo/repo links if allowed.",
-    "differentiation": "Decision-first and finance-aware. The product does not only recommend products; it explains whether a specific supplier quote can become a profitable launch.",
+    "differentiation": "Decision-first and finance-aware. The product does not only recommend products; it shows when a cheap supplier quote becomes an expensive mistake.",
     "competitive_positioning": "Supplier search tools find options, Amazon research tools validate demand, spreadsheets calculate after manual cleanup, agencies execute slowly, and generic AI agents produce advice without durable commerce guardrails. Accio Commerce Copilot combines supplier evidence, landed cost, risk, Accio Work execution, and launch economics into one auditable buy/no-buy workflow.",
     "moat": "The moat is a commerce decision graph: product, supplier, demand, landed cost, cash exposure, risk, and next action state stay linked and exportable."
   },

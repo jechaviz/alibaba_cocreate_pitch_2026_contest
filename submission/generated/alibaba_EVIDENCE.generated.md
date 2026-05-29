@@ -7,6 +7,7 @@
 | done | economics_export | `evidence/unit_economics.json` | `C:\git\v_projects\alibaba_cocreate_pitch_2026` |
 | done | automation_receipts | `automation/evidence/dry-run/cocreate_submission_dry_run_trace.jsonl` | `WAIBAv authorized browser session` |
 | done | video_outline | `docs/media/video_outline.md` | `local capture plan` |
+| done | judge_scorecard | `docs/pitch/judge_scorecard.md` | `competitive pitch strategy` |
 
 ## Integrations
 
