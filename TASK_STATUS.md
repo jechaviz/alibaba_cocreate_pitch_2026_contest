@@ -13,12 +13,12 @@ Production target: `v1.0.0` submission-ready package for Alibaba CoCreate Pitch 
 | Reusable ContestOps profile | done | `C:\git\v_projects\contestops_ai` |
 | Product pitch | done | `docs/pitch/product_pitch.md` |
 | Unit economics | done | `docs/pitch/unit_economics.md` |
-| Demo MVP | active | `C:\git\websites\alibaba_cocreate_pitch_2026` |
-| V backend/CLI | active | `C:\git\v_projects\alibaba_cocreate_pitch_2026` |
+| Demo MVP | done | `C:\git\websites\alibaba_cocreate_pitch_2026`, `evidence/web_qa/` |
+| V backend/CLI | done | `C:\git\v_projects\alibaba_cocreate_pitch_2026`, `evidence/unit_economics.json` |
 | Research and requirements | done | `docs/research/`, `docs/submission/requirements.md` |
 | Automation runbook | done | `automation/`, `runbooks/automation.md`, `automation/evidence/dry-run/` |
 | Video outline | done | `docs/media/video_outline.md` |
-| Submission packet | active | `submission/SUBMISSION_PACKET.md` |
+| Submission packet | done | `submission/SUBMISSION_PACKET.md`, `submission/accio_cocreate_payload.json` |
 
 ## Version Path
 
@@ -26,11 +26,11 @@ Production target: `v1.0.0` submission-ready package for Alibaba CoCreate Pitch 
 |---|---|---|
 | `v0.1.0` | Workspace and Antigravity task manifest | done |
 | `v0.2.0` | ContestOps reusable profile | done |
-| `v0.3.0` | Core pitch, economics, checklist, media skeleton | active |
-| `v0.5.0` | V CLI evidence export and demo data | active |
-| `v0.7.0` | Vue demo MVP with responsive QA | active |
-| `v0.9.0` | Submission package, automation, validation receipts | planned |
-| `v1.0.0` | Production-ready submission package | planned |
+| `v0.3.0` | Core pitch, economics, checklist, media skeleton | done |
+| `v0.5.0` | V CLI evidence export and demo data | done |
+| `v0.7.0` | Vue demo MVP with responsive QA | done |
+| `v0.9.0` | Submission package, automation, validation receipts | done |
+| `v1.0.0` | Production-ready submission package | done |
 
 ## Definition Of Done
 

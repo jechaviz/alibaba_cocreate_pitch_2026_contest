@@ -5,6 +5,9 @@
   "demo": {
     "web_path": "C:\\git\\websites\\alibaba_cocreate_pitch_2026",
     "v_backend_path": "C:\\git\\v_projects\\alibaba_cocreate_pitch_2026",
+    "web_repo": "https://github.com/jechaviz/alibaba_cocreate_pitch_2026_web",
+    "backend_repo": "https://github.com/jechaviz/alibaba_cocreate_pitch_2026_backend",
+    "local_url": "http://127.0.0.1:8787/",
     "judge_flow": [
       "select_category",
       "compare_suppliers",

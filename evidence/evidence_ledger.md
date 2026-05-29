@@ -9,10 +9,12 @@
 | Submission requirements | `docs/submission/requirements.md` | active |
 | Product pitch | `docs/pitch/product_pitch.md` | active |
 | Unit economics | `docs/pitch/unit_economics.md` | active |
-| Demo MVP | `C:\git\websites\alibaba_cocreate_pitch_2026` | active |
-| Backend/CLI | `C:\git\v_projects\alibaba_cocreate_pitch_2026` | active |
+| Demo MVP | `C:\git\websites\alibaba_cocreate_pitch_2026` | done |
+| Backend/CLI | `C:\git\v_projects\alibaba_cocreate_pitch_2026` | done |
+| Web QA screenshots | `evidence/web_qa/` | done |
 | Automation plan | `automation/`, `runbooks/automation.md` | active |
 | Submission packet | `submission/SUBMISSION_PACKET.md` | active |
+| Filled product payload | `submission/accio_cocreate_payload.json` | active |
 
 ## Generated Evidence Targets
 

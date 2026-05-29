@@ -36,7 +36,13 @@ Starter SaaS at `149/month`, team plan for agencies, and usage-based evidence ex
 
 Local demo path: `C:\git\websites\alibaba_cocreate_pitch_2026`
 
+Local demo URL while server is running: `http://127.0.0.1:8787/`
+
+Web repo: `https://github.com/jechaviz/alibaba_cocreate_pitch_2026_web`
+
 Backend/CLI path: `C:\git\v_projects\alibaba_cocreate_pitch_2026`
+
+Backend repo: `https://github.com/jechaviz/alibaba_cocreate_pitch_2026_backend`
 
 Repository: `https://github.com/jechaviz/alibaba_cocreate_pitch_2026_contest`
 
@@ -48,11 +54,14 @@ The 90-second demo opens on the sourcing cockpit, compares supplier options, cal
 
 - Product pitch: `docs/pitch/product_pitch.md`
 - Unit economics: `docs/pitch/unit_economics.md`
+- Backend evidence export: `evidence/unit_economics.json`
+- Web QA screenshots: `evidence/web_qa/`
 - Checklist: `submission/checklist.md`
 - Automation runbook: `runbooks/automation.md`
 - Research snapshot: `docs/research/current_opportunity.md`
 - Field requirements map: `docs/submission/requirements.md`
 - Form automation inventory: `automation/form_inventory.yml`
+- Filled product payload: `submission/accio_cocreate_payload.json`
 
 ## Founder-Facing Answer Blocks
 

@@ -7,9 +7,10 @@ Track: `ai_startup_pitch`
 - [x] AI commerce pitch one-liner.
 - [x] Problem, solution, target customer, business model, differentiation.
 - [x] Unit economics with clear assumptions.
-- [ ] Live demo MVP URL or local preview instructions.
-- [ ] V CLI evidence export attached.
-- [ ] Screenshots for desktop and mobile.
+- [x] Live demo MVP URL or local preview instructions.
+- [x] V CLI evidence export attached.
+- [x] Screenshots for desktop and mobile.
+- [x] Product payload ready for Accio Work / CoCreate form drafting.
 
 ## Contest / Form
 

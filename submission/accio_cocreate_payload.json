@@ -1,0 +1,71 @@
+{
+  "contest": {
+    "program_name": "Alibaba CoCreate Pitch 2026",
+    "track": "ai_startup_pitch",
+    "recommended_public_track": "0-to-1 Startup Track",
+    "application_surface": "Accio Work CoCreate Pitch 2026 Assistant",
+    "region_or_final_preference": "__CONFIRM_LA_LONDON_SEOUL_OR_OTHER_IN_LIVE_FORM__"
+  },
+  "applicant": {
+    "legal_name": "__APPLICANT_LEGAL_NAME__",
+    "preferred_name": "__APPLICANT_PREFERRED_NAME__",
+    "role_title": "__APPLICANT_ROLE_TITLE__",
+    "email": "__ACCIO_WORK_ACCOUNT_EMAIL__",
+    "country": "__APPLICANT_COUNTRY__",
+    "city": "__APPLICANT_CITY__",
+    "linkedin_url": "__APPLICANT_LINKEDIN_URL__"
+  },
+  "organization": {
+    "company_name": "Accio Commerce Copilot",
+    "legal_entity_name": "__LEGAL_ENTITY_NAME_IF_ANY__",
+    "website_url": "__PUBLIC_DEMO_OR_WEBSITE_URL__",
+    "company_stage": "Prototype / MVP",
+    "founding_year": "2026",
+    "team_size": "__TEAM_SIZE__",
+    "industry": "AI commerce, sourcing, import operations"
+  },
+  "pitch": {
+    "one_liner": "Accio Commerce Copilot helps small importers decide what to source, from whom, and at what reorder plan by turning supplier options into AI-scored profit, risk, and execution recommendations.",
+    "problem": "Small importers can discover thousands of supplier listings, but they still make high-stakes buying decisions with fragmented spreadsheets, hidden landed costs, uncertain lead times, and weak demand confidence. The painful moment is not search; it is deciding whether a sourced SKU is worth buying before cash is tied up in inventory.",
+    "solution": "The product imports supplier candidates, normalizes MOQ, unit price, shipping, duties, lead time, and payment terms, then scores margin, cash conversion, supplier reliability, compliance exposure, and launch readiness. It outputs a recommended buy plan, negotiation checklist, storefront launch tasks, and reorder trigger.",
+    "ai_integration": "AI reconciles messy supplier inputs, explains risk drivers, generates RFQ and negotiation messages, and turns financial assumptions into a buy/no-buy recommendation while keeping source assumptions visible for audit.",
+    "why_now": "AI sourcing tools are making discovery faster. The next bottleneck is decision quality: turning supplier options into profitable, explainable, and auditable buy plans for small businesses.",
+    "target_customer": "US and LATAM small importers, Amazon/Walmart/Shopify sellers, independent retailers, and sourcing agencies that evaluate new physical products frequently without dedicated procurement finance teams.",
+    "business_model": "SaaS subscription starting at 149 USD per month, team plans for agencies, and usage-based exports for supplier audit and launch evidence packets.",
+    "go_to_market": "Start with seller communities, import education creators, Shopify/Amazon operator groups, and Accio/Alibaba workflow content. The wedge is SKU launch economics for consumer accessories, home goods, and beauty tools.",
+    "traction": "MVP demo includes supplier comparison, unit economics, risk scoring, workflow actions, and evidence export. Live-form submission should attach screenshots and local demo/repo links if allowed.",
+    "differentiation": "Decision-first and finance-aware. The product does not only recommend products; it explains whether a specific supplier quote can become a profitable launch."
+  },
+  "accio_work": {
+    "used_accio_work": "Prepared for Accio Work CoCreate Pitch flow",
+    "usage_summary": "The submission package maps Accio Work into the startup workflow: product brief, supplier discovery, RFQ drafting, risk memo, storefront copy, and final application assistance.",
+    "agent_workflows": [
+      "Generate sourcing-ready product brief",
+      "Draft RFQ and supplier outreach",
+      "Summarize supplier and compliance risks",
+      "Create storefront launch copy and reorder plan"
+    ],
+    "receipt_or_export_paths": [
+      "automation/evidence/dry-run/cocreate_submission_dry_run_trace.jsonl",
+      "evidence/unit_economics.json",
+      "evidence/web_qa/"
+    ]
+  },
+  "assets": {
+    "demo_url": "http://127.0.0.1:8787/",
+    "repo_url": "https://github.com/jechaviz/alibaba_cocreate_pitch_2026_contest",
+    "web_repo_url": "https://github.com/jechaviz/alibaba_cocreate_pitch_2026_web",
+    "backend_repo_url": "https://github.com/jechaviz/alibaba_cocreate_pitch_2026_backend",
+    "pitch_video_outline": "docs/media/video_outline.md",
+    "product_screenshot_paths": [
+      "evidence/web_qa/desktop_1440x900.png",
+      "evidence/web_qa/mobile_390x844.png"
+    ]
+  },
+  "compliance": {
+    "is_original_work": "__CONFIRM_AFTER_OPERATOR_REVIEW__",
+    "has_rights_to_submit": "__CONFIRM_AFTER_OPERATOR_REVIEW__",
+    "accepts_rules_terms_privacy": "__OPERATOR_ONLY_FINAL_CONFIRMATION__",
+    "no_confidential_information_in_public_fields": "__CONFIRM_AFTER_OPERATOR_REVIEW__"
+  }
+}
