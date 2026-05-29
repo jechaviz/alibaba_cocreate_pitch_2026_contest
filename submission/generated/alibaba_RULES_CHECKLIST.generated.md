@@ -4,7 +4,7 @@ Version: `1.0.0`
 
 | Status | Rule | Evidence |
 |---|---|---|
-| active | AI commerce product thesis is core to the pitch and demo. | `docs/pitch/product_pitch.md` |
+| done | AI commerce product thesis is core to the pitch and demo. | `docs/pitch/product_pitch.md` |
 | done | Accio Work / Alibaba CoCreate flow is mapped for application drafting. | `submission/accio_cocreate_payload.json` |
 | done | Interactive demo MVP shows sourcing, risk, and ROI workflows. | `C:\git\websites\alibaba_cocreate_pitch_2026` |
 | done | Landed-cost, margin, CAC, payback, and supplier-risk economics are ready. | `docs/pitch/unit_economics.md` |

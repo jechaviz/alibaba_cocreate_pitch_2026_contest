@@ -11,7 +11,7 @@ Accio Commerce Copilot helps small importers turn supplier discovery into an AI-
 
 ## Eligibility Gates
 
-- active: AI commerce product thesis is core to the pitch and demo. Evidence: `docs/pitch/product_pitch.md`.
+- done: AI commerce product thesis is core to the pitch and demo. Evidence: `docs/pitch/product_pitch.md`.
 - done: Accio Work / Alibaba CoCreate flow is mapped for application drafting. Evidence: `submission/accio_cocreate_payload.json`.
 - done: Interactive demo MVP shows sourcing, risk, and ROI workflows. Evidence: `C:\git\websites\alibaba_cocreate_pitch_2026`.
 - done: Landed-cost, margin, CAC, payback, and supplier-risk economics are ready. Evidence: `docs/pitch/unit_economics.md`.
