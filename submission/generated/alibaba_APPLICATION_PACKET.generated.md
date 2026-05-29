@@ -37,3 +37,7 @@ Accio Commerce Copilot helps small importers turn supplier discovery into an AI-
 - done: automation_receipts at `automation/evidence/dry-run/cocreate_submission_dry_run_trace.jsonl`.
 - done: video_outline at `docs/media/video_outline.md`.
 - done: judge_scorecard at `docs/pitch/judge_scorecard.md`.
+
+## Proof Sprint
+
+- 2026-05-29: Hold the completed package at submission-ready quality while preserving authorized external-submit controls.

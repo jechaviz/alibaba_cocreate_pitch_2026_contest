@@ -69,6 +69,7 @@ The 90-second demo opens on the sourcing cockpit, compares supplier options, cal
 - Filled product payload: `submission/accio_cocreate_payload.json`
 - Judge scorecard: `docs/pitch/judge_scorecard.md`
 - Deck outline: `submission/deck_outline.md`
+- Generated proof sprint: `submission/generated/alibaba_PROOF_SPRINT.generated.md`
 
 ## Founder-Facing Answer Blocks
 

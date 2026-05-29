@@ -12,6 +12,7 @@
 | Competitive edge model | `evidence/competitive_edge.json` | active |
 | Competitive landscape | `docs/research/competitive_landscape.md` | active |
 | Competitive strategy | `docs/pitch/competitive_strategy.md` | active |
+| Proof sprint | `submission/generated/alibaba_PROOF_SPRINT.generated.md` | done |
 | Demo MVP | `C:\git\websites\alibaba_cocreate_pitch_2026` | done |
 | Backend/CLI | `C:\git\v_projects\alibaba_cocreate_pitch_2026` | done |
 | Web QA screenshots | `evidence/web_qa/` | done |
