@@ -18,7 +18,7 @@
   "organization": {
     "company_name": "Accio Commerce Copilot",
     "legal_entity_name": "__LEGAL_ENTITY_NAME_IF_ANY__",
-    "website_url": "__PUBLIC_DEMO_OR_WEBSITE_URL__",
+    "website_url": "https://jechaviz.github.io/alibaba_cocreate_pitch_2026_web/",
     "company_stage": "Prototype / MVP",
     "founding_year": "2026",
     "team_size": "__TEAM_SIZE__",
@@ -54,7 +54,8 @@
     ]
   },
   "assets": {
-    "demo_url": "http://127.0.0.1:8787/",
+    "demo_url": "https://jechaviz.github.io/alibaba_cocreate_pitch_2026_web/",
+    "local_demo_url": "http://127.0.0.1:8787/",
     "repo_url": "https://github.com/jechaviz/alibaba_cocreate_pitch_2026_contest",
     "web_repo_url": "https://github.com/jechaviz/alibaba_cocreate_pitch_2026_web",
     "backend_repo_url": "https://github.com/jechaviz/alibaba_cocreate_pitch_2026_backend",

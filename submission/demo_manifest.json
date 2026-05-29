@@ -7,6 +7,9 @@
     "v_backend_path": "C:\\git\\v_projects\\alibaba_cocreate_pitch_2026",
     "web_repo": "https://github.com/jechaviz/alibaba_cocreate_pitch_2026_web",
     "backend_repo": "https://github.com/jechaviz/alibaba_cocreate_pitch_2026_backend",
+    "public_url": "https://jechaviz.github.io/alibaba_cocreate_pitch_2026_web/",
+    "pages_status": "built",
+    "deployment_receipt": "evidence/deployment/public_demo_pages_receipt.md",
     "local_url": "http://127.0.0.1:8787/",
     "judge_flow": [
       "select_category",

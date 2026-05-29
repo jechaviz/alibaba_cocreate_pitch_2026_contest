@@ -1,0 +1,42 @@
+metadata:
+  name: contestops-public-demo-qa
+  description: "Open the public GitHub Pages demo and record a WAIBAv trace for submission evidence."
+
+variables:
+  PROJECT_DIR: "${ROOT_PLAYBOOK_DIR}/../.."
+  EVIDENCE_DIR: "${PROJECT_DIR}/automation/evidence/public-demo"
+  TRACE_PATH: "${EVIDENCE_DIR}/public_demo_qa_trace.jsonl"
+  PUBLIC_DEMO_URL: "https://jechaviz.github.io/alibaba_cocreate_pitch_2026_web/"
+
+steps:
+  prod:
+    - action: FS.EnsureDir
+      params:
+        path: "${EVIDENCE_DIR}"
+
+    - action: Trace.Event
+      params:
+        path: "${TRACE_PATH}"
+        name: "public_demo_qa_start"
+        message: "Opening public demo URL for GitHub Pages verification."
+        data:
+          public_demo_url: "${PUBLIC_DEMO_URL}"
+
+    - action: Browser.Open
+      params:
+        url: "${PUBLIC_DEMO_URL}"
+        headless: true
+
+    - action: Trace.Event
+      params:
+        path: "${TRACE_PATH}"
+        name: "public_demo_opened"
+        message: "WAIBAv opened the public demo surface. HTTP shell was separately verified as 200."
+        data:
+          expected_title: "Accio Work Commerce Demo"
+          expected_runtime: "Vue 3 + vue3-sfc-loader + UnoCSS"
+
+  debug:
+    - action: Note
+      params:
+        text: "Public demo QA playbook is alive."

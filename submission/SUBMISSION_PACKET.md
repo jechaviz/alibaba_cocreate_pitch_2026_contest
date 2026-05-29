@@ -38,6 +38,8 @@ Starter SaaS at `149/month`, team plan for agencies, and usage-based evidence ex
 
 ## Demo Link
 
+Public demo URL: `https://jechaviz.github.io/alibaba_cocreate_pitch_2026_web/`
+
 Local demo path: `C:\git\websites\alibaba_cocreate_pitch_2026`
 
 Local demo URL while server is running: `http://127.0.0.1:8787/`
@@ -61,6 +63,7 @@ The 90-second demo opens on the sourcing cockpit, compares supplier options, cal
 - Backend evidence export: `evidence/unit_economics.json`
 - Competitive scoring export: `evidence/competitive_edge.json`
 - Web QA screenshots: `evidence/web_qa/`
+- Public demo deployment receipt: `evidence/deployment/public_demo_pages_receipt.md`
 - Checklist: `submission/checklist.md`
 - Automation runbook: `runbooks/automation.md`
 - Research snapshot: `docs/research/current_opportunity.md`
@@ -70,6 +73,8 @@ The 90-second demo opens on the sourcing cockpit, compares supplier options, cal
 - Judge scorecard: `docs/pitch/judge_scorecard.md`
 - Deck outline: `submission/deck_outline.md`
 - Generated proof sprint: `submission/generated/alibaba_PROOF_SPRINT.generated.md`
+- Final form answer pack: `submission/final_form_answers.md`
+- Judge fast-read: `submission/judge_fast_read.md`
 
 ## Founder-Facing Answer Blocks
 

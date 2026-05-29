@@ -1,6 +1,8 @@
 # Web QA Evidence
 
-Demo URL: `http://127.0.0.1:8787/`
+Public demo URL: `https://jechaviz.github.io/alibaba_cocreate_pitch_2026_web/`
+
+Local demo URL: `http://127.0.0.1:8787/`
 
 Web repo: `https://github.com/jechaviz/alibaba_cocreate_pitch_2026_web`
 
@@ -9,6 +11,7 @@ Captured on: 2026-05-29
 ## Checks
 
 - HTTP status: `200`
+- Public GitHub Pages status: `built`
 - Vue mounted content includes `Accio Work commerce launch console`.
 - Desktop screenshot: `desktop_1440x900.png`
 - Mobile screenshot: `mobile_390x844.png`

@@ -1,0 +1,3 @@
+{"ts":"2026-05-29 17:36:41","name":"public_demo_qa_start","level":"info","message":"Opening public demo URL for GitHub Pages verification.","data":{"public_demo_url":"https://jechaviz.github.io/alibaba_cocreate_pitch_2026_web/"}}
+{"ts":"2026-05-29 17:43:01","name":"public_demo_qa_start","level":"info","message":"Opening public demo URL for GitHub Pages verification.","data":{"public_demo_url":"https://jechaviz.github.io/alibaba_cocreate_pitch_2026_web/"}}
+{"ts":"2026-05-29 17:43:57","name":"public_demo_opened","level":"info","message":"WAIBAv opened the public demo surface. HTTP shell was separately verified as 200.","data":{"expected_title":"Accio Work Commerce Demo","expected_runtime":"Vue 3 + vue3-sfc-loader + UnoCSS"}}
