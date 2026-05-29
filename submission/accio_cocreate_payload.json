@@ -34,7 +34,9 @@
     "business_model": "SaaS subscription starting at 149 USD per month, team plans for agencies, and usage-based exports for supplier audit and launch evidence packets.",
     "go_to_market": "Start with seller communities, import education creators, Shopify/Amazon operator groups, and Accio/Alibaba workflow content. The wedge is SKU launch economics for consumer accessories, home goods, and beauty tools.",
     "traction": "MVP demo includes supplier comparison, unit economics, risk scoring, workflow actions, and evidence export. Live-form submission should attach screenshots and local demo/repo links if allowed.",
-    "differentiation": "Decision-first and finance-aware. The product does not only recommend products; it explains whether a specific supplier quote can become a profitable launch."
+    "differentiation": "Decision-first and finance-aware. The product does not only recommend products; it explains whether a specific supplier quote can become a profitable launch.",
+    "competitive_positioning": "Supplier search tools find options, Amazon research tools validate demand, spreadsheets calculate after manual cleanup, agencies execute slowly, and generic AI agents produce advice without durable commerce guardrails. Accio Commerce Copilot combines supplier evidence, landed cost, risk, Accio Work execution, and launch economics into one auditable buy/no-buy workflow.",
+    "moat": "The moat is a commerce decision graph: product, supplier, demand, landed cost, cash exposure, risk, and next action state stay linked and exportable."
   },
   "accio_work": {
     "used_accio_work": "Prepared for Accio Work CoCreate Pitch flow",

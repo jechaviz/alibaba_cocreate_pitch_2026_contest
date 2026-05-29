@@ -19,6 +19,7 @@ Production target: `v1.0.0` submission-ready package for Alibaba CoCreate Pitch 
 | Automation runbook | done | `automation/`, `runbooks/automation.md`, `automation/evidence/dry-run/` |
 | Video outline | done | `docs/media/video_outline.md` |
 | Submission packet | done | `submission/SUBMISSION_PACKET.md`, `submission/accio_cocreate_payload.json` |
+| Competitive judge narrative | active | `docs/pitch/judge_scorecard.md`, `submission/deck_outline.md` |
 
 ## Version Path
 

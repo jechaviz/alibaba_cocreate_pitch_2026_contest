@@ -20,6 +20,10 @@ Accio Commerce Copilot sits after supplier discovery. It imports candidate suppl
 
 Alibaba and Accio Work help entrepreneurs discover and evaluate global commerce opportunities. This product extends that workflow into the decision layer: what to test, what to negotiate, how much cash is at risk, and when to reorder.
 
+## Why This Wins Against Competitors
+
+Most alternatives stop at one layer: supplier search, marketplace demand research, spreadsheet math, agency sourcing, or generic AI advice. Accio Commerce Copilot combines supplier evidence, landed cost, risk, Accio Work execution steps, and launch economics into one auditable buy/no-buy workflow.
+
 ## AI Use
 
 The AI workflow reconciles messy supplier inputs, explains risk drivers, suggests negotiation messages, and converts financial assumptions into a buy/no-buy recommendation. The system keeps source assumptions visible so operators can audit every recommendation.
@@ -62,6 +66,8 @@ The 90-second demo opens on the sourcing cockpit, compares supplier options, cal
 - Field requirements map: `docs/submission/requirements.md`
 - Form automation inventory: `automation/form_inventory.yml`
 - Filled product payload: `submission/accio_cocreate_payload.json`
+- Judge scorecard: `docs/pitch/judge_scorecard.md`
+- Deck outline: `submission/deck_outline.md`
 
 ## Founder-Facing Answer Blocks
 

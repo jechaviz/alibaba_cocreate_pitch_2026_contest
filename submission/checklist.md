@@ -11,6 +11,8 @@ Track: `ai_startup_pitch`
 - [x] V CLI evidence export attached.
 - [x] Screenshots for desktop and mobile.
 - [x] Product payload ready for Accio Work / CoCreate form drafting.
+- [x] Judge scorecard and competitive rebuttals ready.
+- [x] Deck outline ready.
 
 ## Contest / Form
 
