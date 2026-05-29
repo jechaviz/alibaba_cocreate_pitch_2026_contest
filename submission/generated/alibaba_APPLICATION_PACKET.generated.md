@@ -15,6 +15,7 @@ Accio Commerce Copilot helps small importers turn supplier discovery into an AI-
 - done: Accio Work / Alibaba CoCreate flow is mapped for application drafting. Evidence: `submission/accio_cocreate_payload.json`.
 - done: Interactive demo MVP shows sourcing, risk, and ROI workflows. Evidence: `C:\git\websites\alibaba_cocreate_pitch_2026`.
 - done: Landed-cost, margin, CAC, payback, and supplier-risk economics are ready. Evidence: `docs/pitch/unit_economics.md`.
+- done: Competitive positioning, judge rebuttals, and moat claims are ready. Evidence: `docs/pitch/judge_scorecard.md`.
 - done: Short demo-video outline and production shot list are ready. Evidence: `docs/media/video_outline.md`.
 - done: Submission packet includes copy blocks, checklist, evidence, and automation receipts. Evidence: `submission/SUBMISSION_PACKET.md`.
 - ready_for_authorized_session: External form can be filled only in an authorized operator session. Evidence: `runbooks/automation.md`.
@@ -35,3 +36,4 @@ Accio Commerce Copilot helps small importers turn supplier discovery into an AI-
 - done: economics_export at `evidence/unit_economics.json`.
 - done: automation_receipts at `automation/evidence/dry-run/cocreate_submission_dry_run_trace.jsonl`.
 - done: video_outline at `docs/media/video_outline.md`.
+- done: judge_scorecard at `docs/pitch/judge_scorecard.md`.
