@@ -1,0 +1,11 @@
+private/
+submission/private/
+automation/private/
+evidence/private/
+*.private.json
+*.private.yml
+*.private.yaml
+*.private.md
+*.private.env
+automation/evidence/**/network/
+automation/evidence/**/html/

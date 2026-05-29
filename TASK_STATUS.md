@@ -19,6 +19,7 @@ Production target: `v1.0.0` submission-ready package for Alibaba CoCreate Pitch 
 | Automation runbook | done | `automation/`, `runbooks/automation.md`, `automation/evidence/dry-run/` |
 | Video outline | done | `docs/media/video_outline.md` |
 | Submission packet | done | `submission/SUBMISSION_PACKET.md`, `submission/accio_cocreate_payload.json` |
+| Applicant profile resolution | done | `submission/profile_resolution_redacted.md`, ignored `submission/private/accio_cocreate_payload.private.json` |
 | Competitive judge narrative | done | `docs/pitch/judge_scorecard.md`, `docs/pitch/competitive_strategy.md`, `submission/deck_outline.md` |
 | Competitive backend scoring | done | `evidence/competitive_edge.json` |
 | Competitive landscape | done | `docs/research/competitive_landscape.md` |
@@ -36,6 +37,7 @@ Production target: `v1.0.0` submission-ready package for Alibaba CoCreate Pitch 
 | `v0.7.0` | Vue demo MVP with responsive QA | done |
 | `v0.9.0` | Submission package, automation, validation receipts | done |
 | `v1.0.0` | Production-ready submission package | done |
+| `v1.4.1` | Private applicant payload and redacted profile receipt | done |
 
 ## Definition Of Done
 

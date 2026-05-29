@@ -16,6 +16,31 @@ The public pages confirm the competition/application surfaces, but the full form
 - `automation/form_inventory.yml`: expected field inventory, evidence folder conventions, dry-run controls, and explicit handoff gates.
 - `automation/waiba/cocreate_submission_dry_run.playbook.yml`: safe local dry run. It creates evidence folders and traces scaffold checks without opening external pages.
 - `automation/waiba/cocreate_live_prep.playbook.yml`: visible-browser preparation for an operator-led authorized session. It opens public/application surfaces and records handoff gates.
+- `automation/vimport_env_profile.refs.env`: VImport vault-ref profile for local session credentials or tokens if an authorized flow later needs them.
+- `submission/profile_resolution_redacted.md`: public receipt of applicant fields resolved from the local profile without publishing private values.
+- `submission/private/accio_cocreate_payload.private.json`: ignored local payload with applicant fields filled from `C:\git\customers\yo\profile\jecha_profile.yml`.
+
+## Applicant Profile Resolution
+
+The local profile was used to resolve applicant identity, contact, location,
+role, public professional links, and candidate legal-entity context. Private
+identity, fiscal, signature, account, and document-inventory data remain out of
+public artifacts.
+
+Use the private payload only in an authorized operator session:
+
+```powershell
+$root = "C:\git\v_projects\contests\worth_it\alibaba_cocreate_pitch_2026"
+Get-Content "$root\submission\private\accio_cocreate_payload.private.json" | ConvertFrom-Json | Out-Null
+```
+
+VImport vault refs are available for future authorized session material:
+
+```powershell
+cd C:\git\v_projects\vimport
+v run . -- vault-init alibaba_cocreate_pitch_2026
+Get-Content "$root\automation\vimport_env_profile.refs.env"
+```
 
 ## Dry Run
 
@@ -103,6 +128,7 @@ Do not click final submit during discovery.
 Final submission requires all of the following:
 
 - Final payload values reviewed against the deck, demo, video, and evidence.
+- Private applicant payload reviewed against the official form labels.
 - Required uploads manually confirmed in the form.
 - Terms, rules, eligibility, privacy, and marketing choices manually reviewed.
 - Saved-draft or preview screenshot captured.
