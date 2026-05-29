@@ -12,7 +12,10 @@ Captured on: 2026-05-29
 - Vue mounted content includes `Accio Work commerce launch console`.
 - Desktop screenshot: `desktop_1440x900.png`
 - Mobile screenshot: `mobile_390x844.png`
+- Competitive desktop screenshot: `desktop_competitive_1440x900.png`
+- Competitive mobile screenshot: `mobile_competitive_390x844.png`
 - Worker QA also verified product switch, price edit, Accio action progress, and no runtime exceptions through headless Chrome/CDP.
+- Competitive QA verified `Competition-aware judge mode`, rival workflow tabs, score delta, and judge proof CTA in rendered DOM.
 
 ## Caveats
 

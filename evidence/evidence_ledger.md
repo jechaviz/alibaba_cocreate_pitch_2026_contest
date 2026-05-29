@@ -15,6 +15,7 @@
 | Demo MVP | `C:\git\websites\alibaba_cocreate_pitch_2026` | done |
 | Backend/CLI | `C:\git\v_projects\alibaba_cocreate_pitch_2026` | done |
 | Web QA screenshots | `evidence/web_qa/` | done |
+| Competitive web QA | `evidence/web_qa/desktop_competitive_1440x900.png` | done |
 | Automation plan | `automation/`, `runbooks/automation.md` | active |
 | Submission packet | `submission/SUBMISSION_PACKET.md` | active |
 | Filled product payload | `submission/accio_cocreate_payload.json` | active |

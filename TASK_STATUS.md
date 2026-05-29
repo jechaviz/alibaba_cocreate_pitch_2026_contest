@@ -22,6 +22,7 @@ Production target: `v1.0.0` submission-ready package for Alibaba CoCreate Pitch 
 | Competitive judge narrative | done | `docs/pitch/judge_scorecard.md`, `docs/pitch/competitive_strategy.md`, `submission/deck_outline.md` |
 | Competitive backend scoring | done | `evidence/competitive_edge.json` |
 | Competitive landscape | done | `docs/research/competitive_landscape.md` |
+| Competition-aware web demo | done | `C:\git\websites\alibaba_cocreate_pitch_2026`, `evidence/web_qa/desktop_competitive_1440x900.png` |
 
 ## Version Path
 

@@ -12,6 +12,7 @@
       "select_category",
       "compare_suppliers",
       "review_unit_economics",
+      "compare_competitive_edge",
       "inspect_risk",
       "export_buy_plan"
     ]
