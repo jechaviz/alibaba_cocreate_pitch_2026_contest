@@ -9,3 +9,4 @@ evidence/private/
 *.private.env
 automation/evidence/**/network/
 automation/evidence/**/html/
+automation/evidence/live-fill/
