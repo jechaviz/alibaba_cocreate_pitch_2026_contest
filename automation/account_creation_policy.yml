@@ -1,0 +1,28 @@
+schema: alibaba_cocreate_pitch_2026.account_creation_policy.v1
+updated_at: "2026-05-30"
+scope: "Accio Work / Alibaba CoCreate Pitch 2026 account and draft preparation"
+authorized_email_ref: "C:/git/customers/yo/profile/jecha_profile.yml#contact.email_primary"
+browser_session: "Microsoft Edge default personal profile"
+private_registry: "submission/private/account_registry.private.yml"
+profile_yml: "C:/git/customers/yo/profile/jecha_profile.yml"
+vimport_vault_profile: "alibaba_cocreate_pitch_2026"
+allowed:
+  - "Open official CoCreate Pitch and Accio Work surfaces in the existing Edge profile."
+  - "Create or connect an account only when the official flow uses the authorized profile email."
+  - "Use Google SSO when it is available in the existing Edge/Gmail session."
+  - "Use reserved private password slots only if the official flow rejects SSO and requests email/password signup."
+  - "Record redacted receipts and status transitions."
+blocked:
+  - "Using a different email address or synthetic identity for this submission."
+  - "Publishing email, passwords, cookies, MFA codes, or session tokens."
+  - "Automating CAPTCHA, bot checks, MFA, device trust, terms acceptance, or final submit."
+  - "Submitting the final application without explicit operator confirmation in the live session."
+status_values:
+  - credential_reserved_not_submitted
+  - edge_session_opened
+  - account_created_with_google_sso
+  - account_created_with_reserved_password
+  - existing_account_connected
+  - blocked_by_captcha_or_mfa
+  - blocked_by_terms_or_eligibility_review
+  - final_submit_pending_operator

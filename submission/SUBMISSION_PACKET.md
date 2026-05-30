@@ -64,6 +64,9 @@ The 90-second demo opens on the sourcing cockpit, compares supplier options, cal
 - Competitive scoring export: `evidence/competitive_edge.json`
 - Web QA screenshots: `evidence/web_qa/`
 - Public demo deployment receipt: `evidence/deployment/public_demo_pages_receipt.md`
+- Redacted profile manifest: `evidence/profile/jecha_redacted_profile_manifest.json`
+- Redacted profile application packet: `evidence/profile/jecha_profile_application_packet.json`
+- Authorized account/session policy: `automation/account_creation_policy.yml`
 - Checklist: `submission/checklist.md`
 - Automation runbook: `runbooks/automation.md`
 - Research snapshot: `docs/research/current_opportunity.md`

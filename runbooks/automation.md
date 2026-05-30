@@ -17,8 +17,11 @@ The public pages confirm the competition/application surfaces, but the full form
 - `automation/waiba/cocreate_submission_dry_run.playbook.yml`: safe local dry run. It creates evidence folders and traces scaffold checks without opening external pages.
 - `automation/waiba/cocreate_live_prep.playbook.yml`: visible-browser preparation for an operator-led authorized session. It opens public/application surfaces and records handoff gates.
 - `automation/vimport_env_profile.refs.env`: VImport vault-ref profile for local session credentials or tokens if an authorized flow later needs them.
+- `automation/account_creation_policy.yml`: public, redacted policy for using the profile primary Gmail in authorized Accio/Alibaba account creation.
+- `automation/waiba/default_edge_account_session.playbook.yml`: opens official surfaces in the existing Microsoft Edge profile instead of WAIBAv's isolated browser profile.
 - `submission/profile_resolution_redacted.md`: public receipt of applicant fields resolved from the local profile without publishing private values.
 - `submission/private/accio_cocreate_payload.private.json`: ignored local payload with applicant fields filled from `C:\git\customers\yo\profile\jecha_profile.yml`.
+- `submission/private/account_registry.private.yml`: ignored local registry for account slots, reserved passwords, and vault refs.
 
 ## Applicant Profile Resolution
 
@@ -41,6 +44,20 @@ cd C:\git\v_projects\vimport
 v run . -- vault-init alibaba_cocreate_pitch_2026
 Get-Content "$root\automation\vimport_env_profile.refs.env"
 ```
+
+## Authorized Edge Account Session
+
+Use this when the goal is to connect or create the Accio Work / Alibaba account
+through the existing Microsoft Edge profile:
+
+```powershell
+$root = "C:\git\v_projects\contests\worth_it\alibaba_cocreate_pitch_2026"
+powershell -NoProfile -ExecutionPolicy Bypass -File C:\Users\jecha\.codex\skills\waiba\scripts\invoke-waiba.ps1 validate "$root\automation\waiba\default_edge_account_session.playbook.yml" prod
+powershell -NoProfile -ExecutionPolicy Bypass -File C:\Users\jecha\.codex\skills\waiba\scripts\invoke-waiba.ps1 run "$root\automation\waiba\default_edge_account_session.playbook.yml" prod
+```
+
+This flow may create/connect accounts only with the profile primary Gmail.
+CAPTCHA, MFA, terms, eligibility, and final submit remain operator gates.
 
 ## Dry Run
 

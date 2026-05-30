@@ -14,6 +14,8 @@ Track: `ai_startup_pitch`
 - [x] Product payload ready for Accio Work / CoCreate form drafting.
 - [x] Applicant profile resolved into ignored private payload.
 - [x] Public redacted profile-resolution receipt added.
+- [x] Profile primary Gmail account policy and private account registry prepared.
+- [x] Existing Edge session playbook added for authorized account/session work.
 - [x] Final form answer pack and judge fast-read added.
 - [x] Judge scorecard and competitive rebuttals ready.
 - [x] Deck outline ready.
@@ -27,6 +29,7 @@ Track: `ai_startup_pitch`
 - [ ] Revalidate exact 2026 non-student deadline inside the official form.
 - [ ] Confirm applicant identity, company/entity status, and eligibility.
 - [x] Prepare private applicant payload from `C:\git\customers\yo\profile`.
+- [x] Prepare private account/password slots in local profile YAML and VImport vault.
 - [ ] Review private applicant payload against exact official labels.
 - [ ] Confirm track/category options inside Accio Work.
 - [ ] Paste short answer copy from `SUBMISSION_PACKET.md`.
@@ -45,6 +48,7 @@ Track: `ai_startup_pitch`
 ## External Submission
 
 - [ ] Authorized browser session is active.
+- [ ] Accio/Alibaba account status updated from private registry after live session.
 - [ ] CAPTCHA, login, payment, and final submit gates are handled by operator consent.
 - [ ] Final payload reviewed against official form labels.
 - [ ] Private applicant payload used only after authorized operator review.

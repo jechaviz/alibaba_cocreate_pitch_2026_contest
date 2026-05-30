@@ -7,7 +7,8 @@ metadata:
   status: "draft_inventory_pending_live_form_verification"
   notes:
     - "Public pages confirm CoCreate Pitch 2026 and Accio Work application surfaces, but account-only form fields must be verified in an authorized session."
-    - "Automation must never store Alibaba, Accio, email, phone, MFA, CAPTCHA, or payment credentials."
+    - "Account creation is authorized only for the profile primary Gmail and only through private registry/vault refs."
+    - "Automation must never publish Alibaba, Accio, email, phone, MFA, CAPTCHA, or payment credentials."
 
 sources:
   cocreate_public:
@@ -32,8 +33,17 @@ mode_controls:
     CONTESTOPS_ALLOW_FINAL_SUBMIT:
       default: "false"
       effect: "No playbook may click final submit unless this is true and the operator confirms in session."
+  account_creation_authorization:
+    status: "authorized_for_profile_primary_gmail"
+    public_email_storage: "forbidden"
+    private_registry: "submission/private/account_registry.private.yml"
+    profile_yml: "C:/git/customers/yo/profile/jecha_profile.yml"
+    allowed_actions:
+      - "Open official account/signup surfaces in the existing Edge session."
+      - "Use Google SSO with the profile primary Gmail when available."
+      - "Use private reserved password slots only if official SSO is unavailable."
   prohibited_actions:
-    - "Automated account creation."
+    - "Account creation with any email other than the profile primary Gmail."
     - "Automated CAPTCHA, bot check, or MFA solving."
     - "Automated acceptance of terms, privacy, marketing consent, or legal attestations."
     - "Automated final submission."

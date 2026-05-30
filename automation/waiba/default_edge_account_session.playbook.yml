@@ -1,0 +1,53 @@
+metadata:
+  name: contestops-default-edge-account-session
+  description: "Open CoCreate Pitch and Accio Work in the operator's existing Microsoft Edge profile for authorized account/session work."
+
+variables:
+  PROJECT_DIR: "${ROOT_PLAYBOOK_DIR}/../.."
+  EVIDENCE_DIR: "${PROJECT_DIR}/automation/evidence/default-edge-session"
+  TRACE_PATH: "${EVIDENCE_DIR}/default_edge_account_session_trace.jsonl"
+  COCREATE_PUBLIC_URL: "https://www.alibabacocreate.com/pitch"
+  ACCIO_APPLY_URL: "https://www.accio.com/work/cocreate_pitch?src=p_eventpitch_ytkol_jonlawweb"
+  AUTHORIZED_EMAIL_REF: "profile.contact.email_primary"
+
+steps:
+  prod:
+    - action: FS.EnsureDir
+      params:
+        path: "${EVIDENCE_DIR}"
+
+    - action: Trace.Event
+      params:
+        path: "${TRACE_PATH}"
+        name: "default_edge_session_start"
+        message: "Opening official CoCreate and Accio surfaces in the existing Edge profile."
+        data:
+          authorized_email_ref: "${AUTHORIZED_EMAIL_REF}"
+          cocreate_public_url: "${COCREATE_PUBLIC_URL}"
+          accio_apply_url: "${ACCIO_APPLY_URL}"
+          account_creation_policy: "automation/account_creation_policy.yml"
+          private_registry: "submission/private/account_registry.private.yml"
+
+    - action: Shell.Run
+      params:
+        command: "cmd /c start \"\" msedge \"${COCREATE_PUBLIC_URL}\""
+        allow_fail: false
+
+    - action: Shell.Run
+      params:
+        command: "cmd /c start \"\" msedge \"${ACCIO_APPLY_URL}\""
+        allow_fail: false
+
+    - action: Trace.Event
+      params:
+        path: "${TRACE_PATH}"
+        name: "default_edge_session_opened"
+        message: "Edge tabs opened. Continue with Google SSO or reserved private credentials only if the official flow asks."
+        data:
+          captcha_mfa_terms_submit_are_operator_gates: true
+          final_submit_requires_operator: true
+
+  debug:
+    - action: Note
+      params:
+        text: "Default Edge account-session playbook is alive."

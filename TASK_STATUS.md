@@ -21,6 +21,7 @@ Production target: `v1.0.0` submission-ready package for Alibaba CoCreate Pitch 
 | Video outline | done | `docs/media/video_outline.md` |
 | Submission packet | done | `submission/SUBMISSION_PACKET.md`, `submission/accio_cocreate_payload.json` |
 | Applicant profile resolution | done | `submission/profile_resolution_redacted.md`, ignored `submission/private/accio_cocreate_payload.private.json` |
+| Account/session preparation | done | `automation/account_creation_policy.yml`, ignored `submission/private/account_registry.private.yml`, local profile YAML |
 | Final answer pack | done | `submission/final_form_answers.md`, `submission/judge_fast_read.md` |
 | Competitive judge narrative | done | `docs/pitch/judge_scorecard.md`, `docs/pitch/competitive_strategy.md`, `submission/deck_outline.md` |
 | Competitive backend scoring | done | `evidence/competitive_edge.json` |
@@ -41,6 +42,7 @@ Production target: `v1.0.0` submission-ready package for Alibaba CoCreate Pitch 
 | `v1.0.0` | Production-ready submission package | done |
 | `v1.4.1` | Private applicant payload and redacted profile receipt | done |
 | `v1.4.2` | Public demo URL and final answer pack | done |
+| `v1.4.3` | Profile Gmail account slots and Edge session playbook | done |
 
 ## Definition Of Done
 
